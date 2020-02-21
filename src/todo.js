@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useRevive } from "./revive/context";
+import { useStore } from "./react-store";
 
 const Todo = () => {
   const [value, setValue] = useState("");
-  const { state, dispatch } = useRevive();
+  const { state, dispatch } = useStore();
   return (
     <div>
       <input value={value} onChange={event => setValue(event.target.value)} />

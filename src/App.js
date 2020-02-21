@@ -1,15 +1,17 @@
 import React from "react";
-import { Revive } from "./revive/context";
-import load from "./load";
+import GlobalStore from "./react-store";
+import load from "./store/store";
 import Todo from "./todo";
+import Counter from "./counter";
 
 const App = () => {
   return (
-    <Revive load={load}>
+    <GlobalStore load={load}>
       <div>
         <Todo />
+        <Counter />
       </div>
-    </Revive>
+    </GlobalStore>
   );
 };
 
